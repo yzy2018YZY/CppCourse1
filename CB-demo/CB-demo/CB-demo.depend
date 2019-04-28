@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1544190963 source:d:\学习\c++\练习项目\homework\5-b17-sub\5-b17-main.cpp
+	<iostream>
+	<conio.h>
+	<cstdio>
+	"5-b17.h"
+
+1512656188 d:\学习\c++\练习项目\homework\5-b17-sub\5-b17.h
+
+1544177742 source:d:\学习\c++\练习项目\homework\5-b17-sub\5-b17-sub.cpp
+	<iostream>
+

@@ -1,0 +1,40 @@
+# Project: demoDev
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = 4-b15/4-b15-main.o 4-b15/4-b15-sub1.o 4-b15/4-b15-sub2.o 4-b15/4-b15-sub3.o 4-b15/4-b15-sub4.o
+LINKOBJ  = 4-b15/4-b15-main.o 4-b15/4-b15-sub1.o 4-b15/4-b15-sub2.o 4-b15/4-b15-sub3.o 4-b15/4-b15-sub4.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = demoDev.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+4-b15/4-b15-main.o: 4-b15/4-b15-main.cpp
+	$(CPP) -c 4-b15/4-b15-main.cpp -o 4-b15/4-b15-main.o $(CXXFLAGS)
+
+4-b15/4-b15-sub1.o: 4-b15/4-b15-sub1.cpp
+	$(CPP) -c 4-b15/4-b15-sub1.cpp -o 4-b15/4-b15-sub1.o $(CXXFLAGS)
+
+4-b15/4-b15-sub2.o: 4-b15/4-b15-sub2.cpp
+	$(CPP) -c 4-b15/4-b15-sub2.cpp -o 4-b15/4-b15-sub2.o $(CXXFLAGS)
+
+4-b15/4-b15-sub3.o: 4-b15/4-b15-sub3.cpp
+	$(CPP) -c 4-b15/4-b15-sub3.cpp -o 4-b15/4-b15-sub3.o $(CXXFLAGS)
+
+4-b15/4-b15-sub4.o: 4-b15/4-b15-sub4.cpp
+	$(CPP) -c 4-b15/4-b15-sub4.cpp -o 4-b15/4-b15-sub4.o $(CXXFLAGS)
